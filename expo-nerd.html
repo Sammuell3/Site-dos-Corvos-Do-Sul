@@ -1,0 +1,1297 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Torneio de Swordplay Expo Nerd 2026 | Corvos do Sul</title>
+  <meta name="description" content="Participe do Torneio Oficial de Swordplay dos Corvos do Sul no Expo Nerd Festival Ilhéus. Inscrição por apenas R$ 10. Prêmio: Trio de Katanas de Aço!"/>
+
+  <!-- Favicon / Ícone do site -->
+  <link rel="icon" type="image/png" href="assets/images/brasao.png"/>
+  <link rel="apple-touch-icon" href="assets/images/brasao.png"/>
+
+  <!-- Canonical URL -->
+  <link rel="canonical" href="https://sammuell3.github.io/Site-dos-Corvos-Do-Sul/expo-nerd.html"/>
+
+  <!-- Open Graph — Compartilhamento no WhatsApp e Redes -->
+  <meta property="og:type" content="website"/>
+  <meta property="og:locale" content="pt_BR"/>
+  <meta property="og:url" content="https://sammuell3.github.io/Site-dos-Corvos-Do-Sul/expo-nerd.html"/>
+  <meta property="og:title" content="⚔️ Torneio de Swordplay — Expo Nerd Ilhéus | Corvos do Sul"/>
+  <meta property="og:description" content="Inscrições abertas por R$ 10! Concorra ao Daisho com Trio de Katanas de Aço no Centro de Convenções de Ilhéus."/>
+  <meta property="og:image" content="https://sammuell3.github.io/Site-dos-Corvos-Do-Sul/assets/images/katanas.png"/>
+  <meta property="og:image:secure_url" content="https://sammuell3.github.io/Site-dos-Corvos-Do-Sul/assets/images/katanas.png"/>
+  <meta property="og:image:type" content="image/png"/>
+  <meta property="og:image:alt" content="Trio de Katanas - Prêmio dos Corvos do Sul no Expo Nerd"/>
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image"/>
+  <meta name="twitter:url" content="https://sammuell3.github.io/Site-dos-Corvos-Do-Sul/expo-nerd.html"/>
+  <meta name="twitter:title" content="⚔️ Torneio de Swordplay Expo Nerd 2026 — Corvos do Sul"/>
+  <meta name="twitter:description" content="Inscrição por R$ 10. Venha lutar na arena e disputar o Trio de Katanas de Aço!"/>
+  <meta name="twitter:image" content="https://sammuell3.github.io/Site-dos-Corvos-Do-Sul/assets/images/katanas.png"/>
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800;900&family=Cinzel+Decorative:wght@700&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet"/>
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <style>
+    /* =========================================
+       MEDIEVAL DARK DESIGN TOKENS
+       ========================================= */
+    :root {
+      --bg-darkest: #0a0907;
+      --bg-main: #12100d;
+      --bg-card: #1a1713;
+      --bg-card-hover: #221e18;
+      --border-subtle: #2d261e;
+      --border-gold: rgba(201, 168, 76, 0.35);
+      
+      --gold: #c9a84c;
+      --gold-bright: #e5c46b;
+      --gold-glow: rgba(201, 168, 76, 0.4);
+      --gold-dark: #7a5818;
+
+      --crimson: #c0392b;
+      --crimson-bright: #e74c3c;
+      --crimson-glow: rgba(231, 76, 60, 0.35);
+
+      --parchment: #f0e4cc;
+      --parchment-muted: #ab9f8a;
+      --parchment-dark: #6e6455;
+    }
+
+    body {
+      background-color: var(--bg-main);
+      color: var(--parchment);
+      font-family: 'EB Garamond', serif;
+      background-image: 
+        radial-gradient(circle at 50% 0%, rgba(201, 168, 76, 0.08) 0%, transparent 60%),
+        radial-gradient(circle at 100% 50%, rgba(192, 57, 43, 0.05) 0%, transparent 50%),
+        url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23n)' opacity='0.035'/%3E%3C/svg%3E");
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+    }
+
+    h1, h2, h3, h4, .font-heading {
+      font-family: 'Cinzel', serif;
+      letter-spacing: 0.02em;
+    }
+
+    .font-brand {
+      font-family: 'Cinzel Decorative', cursive;
+    }
+
+    .font-ui {
+      font-family: 'Space Grotesk', sans-serif;
+    }
+
+    /* Glow Effects */
+    .glow-gold {
+      box-shadow: 0 0 25px var(--gold-glow);
+    }
+    .glow-crimson {
+      box-shadow: 0 0 30px var(--crimson-glow);
+    }
+    .text-gold-gradient {
+      background: linear-gradient(135deg, #fce09b 0%, #c9a84c 50%, #8f6e27 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .text-silver-gradient {
+      background: linear-gradient(135deg, #ffffff 0%, #d1d5db 50%, #9ca3af 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    /* Button Medieval */
+    .btn-gold {
+      background: linear-gradient(135deg, #e5c46b 0%, #c9a84c 60%, #9b792b 100%);
+      color: #12100d;
+      font-family: 'Cinzel', serif;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+      border: 1px solid #fae8a4;
+      box-shadow: 0 4px 20px rgba(201, 168, 76, 0.25);
+    }
+    .btn-gold:hover {
+      background: linear-gradient(135deg, #f7d680 0%, #dbba5e 60%, #ad8a39 100%);
+      box-shadow: 0 6px 30px rgba(201, 168, 76, 0.45);
+      transform: translateY(-2px);
+    }
+
+    .btn-crimson {
+      background: linear-gradient(135deg, #e74c3c 0%, #c0392b 70%, #962d22 100%);
+      color: #fff;
+      font-family: 'Cinzel', serif;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      transition: all 0.3s ease;
+      border: 1px solid #ff7961;
+      box-shadow: 0 4px 25px rgba(231, 76, 60, 0.35);
+    }
+    .btn-crimson:hover {
+      background: linear-gradient(135deg, #ff5e4d 0%, #d44131 70%, #ad3427 100%);
+      box-shadow: 0 6px 35px rgba(231, 76, 60, 0.6);
+      transform: translateY(-2px);
+    }
+
+    /* Ornaments */
+    .medieval-frame {
+      border: 1px solid var(--border-gold);
+      position: relative;
+    }
+    .medieval-frame::before, .medieval-frame::after {
+      content: "✦";
+      position: absolute;
+      color: var(--gold);
+      font-size: 10px;
+      line-height: 1;
+    }
+    .medieval-frame::before { top: -6px; left: -6px; }
+    .medieval-frame::after { bottom: -6px; right: -6px; }
+
+    /* Modal Backdrop */
+    .modal-backdrop {
+      background-color: rgba(6, 5, 4, 0.85);
+      backdrop-filter: blur(8px);
+    }
+
+    /* Pulse animation */
+    @keyframes pulse-slow {
+      0%, 100% { opacity: 1; transform: scale(1); }
+      50% { opacity: 0.85; transform: scale(1.02); }
+    }
+    .animate-pulse-slow {
+      animation: pulse-slow 3s ease-in-out infinite;
+    }
+
+    /* Card glow border */
+    .card-dark {
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      transition: all 0.3s ease;
+    }
+    .card-dark:hover {
+      border-color: var(--border-gold);
+      background: var(--bg-card-hover);
+      transform: translateY(-3px);
+    }
+  </style>
+</head>
+<body class="min-h-screen flex flex-col selection:bg-[var(--gold)] selection:text-black">
+
+  <!-- ================================================================= -->
+  <!-- CONFIGURAÇÃO RÁPIDA (Altere WhatsApp e Chave Pix aqui se desejar) -->
+  <!-- ================================================================= -->
+  <script>
+    window.CORVOS_CONFIG = {
+      whatsappNumber: "5573991568377", // Número do WhatsApp dos Corvos (com DDD)
+      pixPayload: "00020126580014br.gov.bcb.pix01362249a025-73d1-484a-a9f6-b1ec0270ad35520400005303986540510.005802BR5923LARISSA SILVA FLORENCIO6009Sao Paulo62290525REC6AA32A198DB4891411180763049929", // Código Pix Copia-e-Cola Oficial do Banco
+      pixKey: "2249a025-73d1-484a-a9f6-b1ec0270ad35", // Chave Pix Aleatória
+      pixReceiverName: "Larissa Silva Florêncio",
+      pixCity: "Sao Paulo",
+      ticketPrice: "10.00",
+      eventDate: "2026-09-11T12:00:00-03:00"
+    };
+  </script>
+
+  <!-- =========================================
+       ANNOUNCEMENT BAR (TOP)
+       ========================================= -->
+  <div class="bg-gradient-to-r from-[#17120a] via-[#2c200c] to-[#17120a] border-b border-[var(--border-gold)] py-2 px-4 text-center text-xs md:text-sm font-ui text-[var(--parchment)] flex items-center justify-center gap-2">
+    <span class="inline-flex items-center justify-center w-2 h-2 rounded-full bg-[var(--crimson-bright)] animate-ping"></span>
+    <span><strong>EXPO NERD FESTIVAL 2026:</strong> Ilhéus recebe a Arena Oficial de Combate dos Corvos do Sul!</span>
+    <a href="#inscricao" class="hidden sm:inline-flex items-center gap-1 text-[var(--gold-bright)] underline hover:text-white font-bold ml-2">
+      Garantir Vaga (R$ 10) →
+    </a>
+  </div>
+
+  <!-- =========================================
+       STICKY HEADER
+       ========================================= -->
+  <header class="sticky top-0 z-40 bg-[rgba(10,9,7,0.92)] backdrop-blur-md border-b border-[var(--border-subtle)] py-3 px-4 md:px-8">
+    <div class="max-w-7xl mx-auto flex items-center justify-between">
+      
+      <!-- Brand & Return to Home -->
+      <div class="flex items-center gap-3">
+        <a href="index.html" class="flex items-center gap-3 group" title="Voltar ao site principal dos Corvos do Sul">
+          <img src="assets/images/brasao.png" alt="Brasão Corvos do Sul" class="w-10 h-10 object-contain drop-shadow-[0_0_8px_rgba(201,168,76,0.5)] group-hover:rotate-3 transition-transform"/>
+          <div class="flex flex-col">
+            <span class="font-heading text-lg md:text-xl font-bold tracking-wider text-[var(--parchment)] group-hover:text-[var(--gold-bright)] transition-colors leading-none">
+              Corvos do Sul
+            </span>
+            <span class="text-[10px] tracking-[0.25em] uppercase text-[var(--gold)] font-ui">
+              Arena Expo Nerd 2026
+            </span>
+          </div>
+        </a>
+      </div>
+
+      <!-- Nav Anchor Links -->
+      <nav class="hidden lg:flex items-center gap-6 font-ui text-sm text-[var(--parchment-muted)]">
+        <a href="#premio" class="hover:text-[var(--gold)] transition-colors flex items-center gap-1">
+          <i data-lucide="trophy" class="w-4 h-4 text-[var(--gold)]"></i> Prêmio das Katanas
+        </a>
+        <a href="#como-funciona" class="hover:text-[var(--gold)] transition-colors flex items-center gap-1">
+          <i data-lucide="book-open" class="w-4 h-4 text-[var(--gold)]"></i> Regras & Arena
+        </a>
+        <a href="#faq" class="hover:text-[var(--gold)] transition-colors flex items-center gap-1">
+          <i data-lucide="help-circle" class="w-4 h-4"></i> Dúvidas
+        </a>
+        <a href="index.html" class="hover:text-[var(--parchment)] transition-colors flex items-center gap-1 border-l border-[var(--border-subtle)] pl-4">
+          <i data-lucide="arrow-left" class="w-4 h-4"></i> Site Oficial
+        </a>
+      </nav>
+
+      <!-- Action Button -->
+      <div class="flex items-center gap-3">
+        <a href="#inscricao" class="btn-gold py-2 px-4 md:px-5 rounded-lg text-xs md:text-sm font-semibold flex items-center gap-2">
+          <i data-lucide="zap" class="w-4 h-4 fill-current"></i>
+          <span>Inscrever (R$ 10)</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- =========================================
+       HERO SECTION
+       ========================================= -->
+  <section class="relative min-h-[90vh] flex items-center justify-center pt-8 pb-16 px-4 md:px-8 overflow-hidden">
+    
+    <!-- Decorative Ambient Glows -->
+    <div class="absolute top-1/4 left-1/2 -translate-x-1/2 w-[700px] h-[350px] bg-[radial-gradient(ellipse_at_center,rgba(201,168,76,0.12)_0%,transparent_70%)] pointer-events-none -z-10 blur-3xl"></div>
+    <div class="absolute bottom-10 left-10 w-96 h-96 bg-[radial-gradient(circle,rgba(192,57,43,0.1)_0%,transparent_70%)] pointer-events-none -z-10 blur-2xl"></div>
+
+    <div class="max-w-5xl mx-auto text-center flex flex-col items-center">
+      
+      <!-- Event Pills -->
+      <div class="inline-flex flex-wrap items-center justify-center gap-2 md:gap-3 mb-6">
+        <span class="inline-flex items-center gap-1.5 py-1 px-3.5 rounded-full bg-[rgba(201,168,76,0.12)] border border-[var(--border-gold)] text-[var(--gold-bright)] text-xs md:text-sm font-ui font-semibold">
+          <i data-lucide="calendar" class="w-4 h-4"></i> 11 a 13 de Setembro de 2026
+        </span>
+        <span class="inline-flex items-center gap-1.5 py-1 px-3.5 rounded-full bg-[rgba(255,255,255,0.05)] border border-[var(--border-subtle)] text-[var(--parchment-muted)] text-xs md:text-sm font-ui">
+          <i data-lucide="map-pin" class="w-4 h-4 text-[var(--crimson-bright)]"></i> Centro de Convenções de Ilhéus, BA
+        </span>
+        <span class="inline-flex items-center gap-1.5 py-1 px-3.5 rounded-full bg-[rgba(231,76,60,0.15)] border border-[rgba(231,76,60,0.3)] text-[var(--crimson-bright)] text-xs md:text-sm font-ui font-bold">
+          <i data-lucide="flame" class="w-4 h-4"></i> Vagas Limitadas
+        </span>
+      </div>
+
+      <!-- Main Headline -->
+      <h1 class="text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold uppercase leading-tight tracking-tight text-[var(--parchment)] max-w-4xl">
+        Torneio de Swordplay <br/>
+        <span class="text-gold-gradient">Arena dos Corvos do Sul</span>
+      </h1>
+
+      <!-- Subtitle -->
+      <p class="mt-6 text-lg sm:text-xl md:text-2xl text-[var(--parchment-muted)] max-w-3xl leading-relaxed">
+        Empunhe sua espada na maior arena geek do sul da Bahia. Lutas com armas acolchoadas e seguras. 
+        <strong class="text-[var(--parchment)] font-semibold">O campeão leva para casa o Trio de Katanas de Aço!</strong>
+      </p>
+
+      <!-- Countdown Component -->
+      <div class="mt-8 p-4 rounded-2xl bg-[var(--bg-card)] border border-[var(--border-gold)] max-w-lg w-full shadow-2xl">
+        <div class="text-xs uppercase tracking-widest text-[var(--gold)] font-ui font-semibold mb-3 flex items-center justify-center gap-1.5">
+          <i data-lucide="clock" class="w-4 h-4"></i> Contagem Regressiva para a Batalha
+        </div>
+        <div class="grid grid-cols-4 gap-2 text-center" id="countdown">
+          <div class="bg-[var(--bg-darkest)] p-2 rounded-lg border border-[var(--border-subtle)]">
+            <span class="block text-2xl md:text-3xl font-bold font-ui text-[var(--parchment)]" id="days">--</span>
+            <span class="text-[10px] uppercase tracking-wider text-[var(--parchment-dark)]">Dias</span>
+          </div>
+          <div class="bg-[var(--bg-darkest)] p-2 rounded-lg border border-[var(--border-subtle)]">
+            <span class="block text-2xl md:text-3xl font-bold font-ui text-[var(--parchment)]" id="hours">--</span>
+            <span class="text-[10px] uppercase tracking-wider text-[var(--parchment-dark)]">Horas</span>
+          </div>
+          <div class="bg-[var(--bg-darkest)] p-2 rounded-lg border border-[var(--border-subtle)]">
+            <span class="block text-2xl md:text-3xl font-bold font-ui text-[var(--parchment)]" id="minutes">--</span>
+            <span class="text-[10px] uppercase tracking-wider text-[var(--parchment-dark)]">Min</span>
+          </div>
+          <div class="bg-[var(--bg-darkest)] p-2 rounded-lg border border-[var(--border-subtle)]">
+            <span class="block text-2xl md:text-3xl font-bold font-ui text-[var(--crimson-bright)]" id="seconds">--</span>
+            <span class="text-[10px] uppercase tracking-wider text-[var(--parchment-dark)]">Seg</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Hero Call To Action Buttons -->
+      <div class="mt-10 flex flex-col sm:flex-row items-center gap-4 w-full justify-center max-w-md">
+        <a href="#inscricao" class="w-full sm:w-auto btn-crimson py-4 px-8 rounded-xl text-base md:text-lg flex items-center justify-center gap-3 animate-pulse-slow">
+          <i data-lucide="shield" class="w-5 h-5"></i>
+          <span>Garantir Inscrição — R$ 10</span>
+        </a>
+        <a href="#premio" class="w-full sm:w-auto py-4 px-6 rounded-xl text-sm md:text-base font-ui font-semibold text-[var(--parchment)] bg-[var(--bg-card)] hover:bg-[var(--bg-card-hover)] border border-[var(--border-subtle)] hover:border-[var(--border-gold)] transition-all flex items-center justify-center gap-2">
+          <span>Ver Prêmio & Regras</span>
+          <i data-lucide="chevron-down" class="w-4 h-4"></i>
+        </a>
+      </div>
+
+      <!-- Trust Badges -->
+      <div class="mt-12 grid grid-cols-2 md:grid-cols-4 gap-4 text-left w-full max-w-4xl pt-8 border-t border-[var(--border-subtle)]">
+        <div class="flex items-center gap-3">
+          <div class="w-9 h-9 rounded-lg bg-[rgba(201,168,76,0.1)] border border-[var(--border-gold)] flex items-center justify-center shrink-0">
+            <i data-lucide="shield-check" class="w-5 h-5 text-[var(--gold)]"></i>
+          </div>
+          <div>
+            <div class="text-xs font-bold text-[var(--parchment)] font-ui">Equipamento Fornecido</div>
+            <div class="text-[11px] text-[var(--parchment-muted)]">Espadas acolchoadas no local</div>
+          </div>
+        </div>
+
+        <div class="flex items-center gap-3">
+          <div class="w-9 h-9 rounded-lg bg-[rgba(201,168,76,0.1)] border border-[var(--border-gold)] flex items-center justify-center shrink-0">
+            <i data-lucide="users" class="w-5 h-5 text-[var(--gold)]"></i>
+          </div>
+          <div>
+            <div class="text-xs font-bold text-[var(--parchment)] font-ui">Aberto a Iniciantes</div>
+            <div class="text-[11px] text-[var(--parchment-muted)]">Instrução antes de lutar</div>
+          </div>
+        </div>
+
+        <div class="flex items-center gap-3">
+          <div class="w-9 h-9 rounded-lg bg-[rgba(201,168,76,0.1)] border border-[var(--border-gold)] flex items-center justify-center shrink-0">
+            <i data-lucide="award" class="w-5 h-5 text-[var(--gold)]"></i>
+          </div>
+          <div>
+            <div class="text-xs font-bold text-[var(--parchment)] font-ui">Troféu Lendário</div>
+            <div class="text-[11px] text-[var(--parchment-muted)]">3 Katanas de aço reais</div>
+          </div>
+        </div>
+
+        <div class="flex items-center gap-3">
+          <div class="w-9 h-9 rounded-lg bg-[rgba(201,168,76,0.1)] border border-[var(--border-gold)] flex items-center justify-center shrink-0">
+            <i data-lucide="sparkles" class="w-5 h-5 text-[var(--gold)]"></i>
+          </div>
+          <div>
+            <div class="text-xs font-bold text-[var(--parchment)] font-ui">Apenas R$ 10,00</div>
+            <div class="text-[11px] text-[var(--parchment-muted)]">Preço único e acessível</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- =========================================
+       PREMIAÇÃO — TRIO DE KATANAS REAL
+       ========================================= -->
+  <section id="premio" class="py-20 px-4 md:px-8 bg-gradient-to-b from-[var(--bg-main)] via-[var(--bg-card)] to-[var(--bg-main)] border-y border-[var(--border-subtle)] relative">
+    <div class="max-w-6xl mx-auto">
+      
+      <!-- Section Header -->
+      <div class="text-center max-w-2xl mx-auto mb-14">
+        <span class="text-xs md:text-sm font-ui uppercase tracking-[0.25em] text-[var(--gold-bright)] font-bold flex items-center justify-center gap-2">
+          <i data-lucide="crown" class="w-4 h-4"></i> A Recompensa da Glória
+        </span>
+        <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold uppercase text-[var(--parchment)] mt-3">
+          O Trio de Katanas de Aço
+        </h2>
+        <p class="text-base sm:text-lg text-[var(--parchment-muted)] mt-4 leading-relaxed">
+          O grande vencedor da Arena dos Corvos do Sul levará para casa o conjunto completo Daisho tradicional em aço trabalhado com suporte de exibição de madeira.
+        </p>
+      </div>
+
+      <!-- Katana Showcase Card -->
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center bg-[var(--bg-darkest)] rounded-3xl p-6 sm:p-10 border border-[var(--border-gold)] shadow-2xl relative overflow-hidden">
+        
+        <!-- Ambient background glow behind image -->
+        <div class="absolute -right-20 -top-20 w-80 h-80 bg-[radial-gradient(circle,rgba(201,168,76,0.2)_0%,transparent_70%)] blur-3xl pointer-events-none"></div>
+
+        <!-- Katana Image Display -->
+        <div class="lg:col-span-7 relative group">
+          <div class="relative overflow-hidden rounded-2xl border border-[rgba(201,168,76,0.3)] bg-[#0d0c09] p-3 shadow-inner">
+            <img 
+              src="assets/images/katanas.png" 
+              alt="Trio de Katanas de Aço com Suporte de Mesa - Prêmio Oficial" 
+              class="w-full h-auto object-cover rounded-xl transform group-hover:scale-105 transition-transform duration-500 drop-shadow-[0_10px_20px_rgba(0,0,0,0.8)]"
+              loading="lazy"
+            />
+          </div>
+        </div>
+
+        <!-- Katana Details List -->
+        <div class="lg:col-span-5 flex flex-col gap-6">
+          <div>
+            <span class="text-xs uppercase tracking-widest text-[var(--crimson-bright)] font-ui font-bold">Troféu Oficial do Torneio</span>
+            <h3 class="text-2xl sm:text-3xl font-bold uppercase text-[var(--parchment)] mt-1">
+              Conjunto Daisho Completo
+            </h3>
+            <p class="text-sm sm:text-base text-[var(--parchment-muted)] mt-2">
+              Entregue solenemente ao campeão no domingo do festival no Centro de Convenções de Ilhéus.
+            </p>
+          </div>
+
+          <div class="space-y-4">
+            <div class="flex items-start gap-3.5 p-3.5 rounded-xl bg-[var(--bg-card)] border border-[var(--border-subtle)]">
+              <div class="w-8 h-8 rounded-lg bg-[rgba(201,168,76,0.15)] flex items-center justify-center shrink-0 text-[var(--gold-bright)] font-bold text-sm">1</div>
+              <div>
+                <h4 class="text-sm font-bold text-[var(--parchment)] font-ui uppercase">Katana Principal (Daito)</h4>
+                <p class="text-xs text-[var(--parchment-muted)] mt-0.5">Lâmina longa em aço polido com bainha laqueada preta e empunhadura encordoada.</p>
+              </div>
+            </div>
+
+            <div class="flex items-start gap-3.5 p-3.5 rounded-xl bg-[var(--bg-card)] border border-[var(--border-subtle)]">
+              <div class="w-8 h-8 rounded-lg bg-[rgba(201,168,76,0.15)] flex items-center justify-center shrink-0 text-[var(--gold-bright)] font-bold text-sm">2</div>
+              <div>
+                <h4 class="text-sm font-bold text-[var(--parchment)] font-ui uppercase">Wakizashi (Espada Média)</h4>
+                <p class="text-xs text-[var(--parchment-muted)] mt-0.5">Espada de honra tradicional japonesa para combate próximo e equilíbrio do conjunto.</p>
+              </div>
+            </div>
+
+            <div class="flex items-start gap-3.5 p-3.5 rounded-xl bg-[var(--bg-card)] border border-[var(--border-subtle)]">
+              <div class="w-8 h-8 rounded-lg bg-[rgba(201,168,76,0.15)] flex items-center justify-center shrink-0 text-[var(--gold-bright)] font-bold text-sm">3</div>
+              <div>
+                <h4 class="text-sm font-bold text-[var(--parchment)] font-ui uppercase">Tanto (Adaga) + Expositor Triplo</h4>
+                <p class="text-xs text-[var(--parchment-muted)] mt-0.5">Adaga cerimonial e suporte de madeira nobre para exibir o trio com orgulho em sua casa.</p>
+              </div>
+            </div>
+          </div>
+
+          <a href="#inscricao" class="btn-gold py-3 px-6 rounded-xl text-center text-sm font-semibold flex items-center justify-center gap-2">
+            <i data-lucide="swords" class="w-4 h-4"></i>
+            <span>Disputar as Katanas por R$ 10</span>
+          </a>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- =========================================
+       COMO FUNCIONA / REGRAS OFICIAIS
+       ========================================= -->
+  <section id="como-funciona" class="py-20 px-4 md:px-8">
+    <div class="max-w-6xl mx-auto">
+      
+      <!-- Section Header -->
+      <div class="text-center max-w-2xl mx-auto mb-16">
+        <span class="text-xs md:text-sm font-ui uppercase tracking-[0.25em] text-[var(--gold-bright)] font-bold flex items-center justify-center gap-2">
+          <i data-lucide="book-open" class="w-4 h-4"></i> Regulamento Oficial & Dinâmica
+        </span>
+        <h2 class="text-3xl sm:text-4xl font-bold uppercase text-[var(--parchment)] mt-2">
+          Como Funciona o Torneio
+        </h2>
+        <p class="text-base text-[var(--parchment-muted)] mt-3">
+          O swordplay une a adrenalina da batalha medieval à honra esportiva e total segurança física. Conheça as diretrizes da nossa arena.
+        </p>
+      </div>
+
+      <!-- Top 3 Pillars -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
+        
+        <div class="card-dark p-6 rounded-2xl flex flex-col justify-between">
+          <div>
+            <div class="w-12 h-12 rounded-xl bg-[rgba(201,168,76,0.12)] border border-[var(--border-gold)] flex items-center justify-center mb-5 text-[var(--gold)]">
+              <i data-lucide="shield" class="w-6 h-6"></i>
+            </div>
+            <h3 class="text-xl font-bold text-[var(--parchment)] font-heading uppercase mb-2">Armas Seguras</h3>
+            <p class="text-sm text-[var(--parchment-muted)] leading-relaxed">
+              Todas as espadas são acolchoadas em espuma especial sobre alma de fibra flexível, inspecionadas pela organização para garantir impacto indolor e 100% de segurança física.
+            </p>
+          </div>
+          <div class="mt-6 pt-4 border-t border-[var(--border-subtle)] text-xs text-[var(--gold)] font-ui font-semibold flex items-center gap-1">
+            <i data-lucide="check" class="w-4 h-4"></i> Fornecido sem custo
+          </div>
+        </div>
+
+        <div class="card-dark p-6 rounded-2xl flex flex-col justify-between">
+          <div>
+            <div class="w-12 h-12 rounded-xl bg-[rgba(201,168,76,0.12)] border border-[var(--border-gold)] flex items-center justify-center mb-5 text-[var(--gold)]">
+              <i data-lucide="scale" class="w-6 h-6"></i>
+            </div>
+            <h3 class="text-xl font-bold text-[var(--parchment)] font-heading uppercase mb-2">Chaveamento & Duelos</h3>
+            <p class="text-sm text-[var(--parchment-muted)] leading-relaxed">
+              Duelos de honra por pontuação em chaves eliminatórias equilibradas. Combates arbitrados por juízes veteranos dos Corvos do Sul.
+            </p>
+          </div>
+          <div class="mt-6 pt-4 border-t border-[var(--border-subtle)] text-xs text-[var(--gold)] font-ui font-semibold flex items-center gap-1">
+            <i data-lucide="check" class="w-4 h-4"></i> Árbitros oficiais Corvos
+          </div>
+        </div>
+
+        <div class="card-dark p-6 rounded-2xl flex flex-col justify-between">
+          <div>
+            <div class="w-12 h-12 rounded-xl bg-[rgba(201,168,76,0.12)] border border-[var(--border-gold)] flex items-center justify-center mb-5 text-[var(--gold)]">
+              <i data-lucide="graduation-cap" class="w-6 h-6"></i>
+            </div>
+            <h3 class="text-xl font-bold text-[var(--parchment)] font-heading uppercase mb-2">Treinamento Inicial</h3>
+            <p class="text-sm text-[var(--parchment-muted)] leading-relaxed">
+              Nunca pegou numa espada antes? Sem problemas! Nossa equipe realiza uma breve instrução técnica e aquecimento para que você entre na arena confiante e preparado.
+            </p>
+          </div>
+          <div class="mt-6 pt-4 border-t border-[var(--border-subtle)] text-xs text-[var(--gold)] font-ui font-semibold flex items-center gap-1">
+            <i data-lucide="check" class="w-4 h-4"></i> Qualquer um pode vencer
+          </div>
+        </div>
+
+      </div>
+
+      <!-- =========================================
+           CARD DE REGRAS: RESUMO TÁTICO DA ARENA
+           ========================================= -->
+      <div class="bg-[var(--bg-darkest)] border border-[var(--border-gold)] rounded-3xl p-6 sm:p-10 shadow-2xl relative overflow-hidden mb-12">
+        
+        <!-- Ambient Glow -->
+        <div class="absolute -left-24 -bottom-24 w-80 h-80 bg-[radial-gradient(circle,rgba(201,168,76,0.12)_0%,transparent_70%)] blur-3xl pointer-events-none"></div>
+
+        <!-- Section Title -->
+        <div class="flex flex-col sm:flex-row sm:items-end justify-between gap-4 border-b border-[var(--border-subtle)] pb-6 mb-8">
+          <div>
+            <div class="flex items-center gap-2 text-xs font-ui uppercase tracking-widest text-[var(--gold-bright)] font-bold mb-1">
+              <i data-lucide="target" class="w-4 h-4"></i> Card de Regras Oficial
+            </div>
+            <h3 class="text-2xl sm:text-3xl font-bold uppercase text-[var(--parchment)] font-heading">
+              Sistema de Pontuação & Alvos
+            </h3>
+            <p class="text-sm text-[var(--parchment-muted)] mt-1">
+              Apenas toques limpos e controlados pontuam. O contato físico descontrolado é proibido.
+            </p>
+          </div>
+          <div class="flex items-center gap-2 bg-[rgba(201,168,76,0.1)] border border-[var(--border-gold)] px-3.5 py-1.5 rounded-full text-xs font-ui text-[var(--gold-bright)] shrink-0 self-start sm:self-auto">
+            <i data-lucide="award" class="w-3.5 h-3.5"></i> 5 pts = Vitória Ranqueada
+          </div>
+        </div>
+
+        <!-- Scoring 3-Card Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+          
+          <!-- +2 Pontos: Peito e Costas -->
+          <div class="bg-[#15130f] rounded-2xl p-5 border-2 border-[rgba(201,168,76,0.6)] shadow-lg relative flex flex-col justify-between">
+            <div>
+              <div class="flex items-center justify-between gap-2 mb-3">
+                <span class="inline-flex items-center gap-1 px-3 py-1 rounded-full bg-[rgba(201,168,76,0.2)] border border-[var(--gold)] text-[var(--gold-bright)] font-ui font-extrabold text-xs tracking-wider">
+                  <i data-lucide="flame" class="w-3.5 h-3.5"></i> +2 PONTOS
+                </span>
+                <span class="text-[10px] uppercase font-ui tracking-wider text-[var(--parchment-muted)]">Ponto Efetivo</span>
+              </div>
+              <h4 class="text-lg font-bold uppercase text-[var(--parchment)] font-heading mb-2">
+                Peito & Costas
+              </h4>
+              <p class="text-xs text-[var(--parchment-muted)] leading-relaxed mb-4">
+                Golpes limpos no peitoral ou nas costas. Por representarem zonas vitais do corpo, conferem a pontuação máxima no combate.
+              </p>
+            </div>
+            <ul class="space-y-1.5 text-xs text-[var(--parchment)] font-ui border-t border-[var(--border-subtle)] pt-3">
+              <li class="flex items-center gap-2">
+                <i data-lucide="check" class="w-3.5 h-3.5 text-[var(--gold-bright)]"></i> Tórax / Peitoral completo
+              </li>
+              <li class="flex items-center gap-2">
+                <i data-lucide="check" class="w-3.5 h-3.5 text-[var(--gold-bright)]"></i> Costas e omoplata
+              </li>
+            </ul>
+          </div>
+
+          <!-- +1 Ponto: Membros -->
+          <div class="bg-[#15130f] rounded-2xl p-5 border border-[rgba(201,168,76,0.3)] shadow-lg relative flex flex-col justify-between">
+            <div>
+              <div class="flex items-center justify-between gap-2 mb-3">
+                <span class="inline-flex items-center gap-1 px-3 py-1 rounded-full bg-[rgba(255,255,255,0.08)] border border-[var(--border-subtle)] text-[var(--parchment)] font-ui font-extrabold text-xs tracking-wider">
+                  <i data-lucide="sword" class="w-3.5 h-3.5 text-[var(--gold)]"></i> +1 PONTO
+                </span>
+                <span class="text-[10px] uppercase font-ui tracking-wider text-[var(--parchment-muted)]">Não-Efetivo</span>
+              </div>
+              <h4 class="text-lg font-bold uppercase text-[var(--parchment)] font-heading mb-2">
+                Braços, Pernas & Cintura
+              </h4>
+              <p class="text-xs text-[var(--parchment-muted)] leading-relaxed mb-4">
+                Toques válidos nas extremidades. Membros elevados ou no ar também contam pontuação normalmente.
+              </p>
+            </div>
+            <ul class="space-y-1.5 text-xs text-[var(--parchment-muted)] font-ui border-t border-[var(--border-subtle)] pt-3">
+              <li class="flex items-center gap-2">
+                <i data-lucide="check" class="w-3.5 h-3.5 text-[var(--gold)]"></i> Braços (exceto mãos na arma)
+              </li>
+              <li class="flex items-center gap-2">
+                <i data-lucide="check" class="w-3.5 h-3.5 text-[var(--gold)]"></i> Pernas (exceto pé apoiado no chão)
+              </li>
+              <li class="flex items-center gap-2">
+                <i data-lucide="check" class="w-3.5 h-3.5 text-[var(--gold)]"></i> Linha de cintura
+              </li>
+            </ul>
+          </div>
+
+          <!-- -1 Ponto: Proibições -->
+          <div class="bg-[#181110] rounded-2xl p-5 border-2 border-[rgba(192,57,43,0.6)] shadow-lg relative flex flex-col justify-between">
+            <div>
+              <div class="flex items-center justify-between gap-2 mb-3">
+                <span class="inline-flex items-center gap-1 px-3 py-1 rounded-full bg-[rgba(192,57,43,0.2)] border border-[var(--crimson-bright)] text-[var(--crimson-bright)] font-ui font-extrabold text-xs tracking-wider">
+                  <i data-lucide="alert-triangle" class="w-3.5 h-3.5"></i> -1 PONTO
+                </span>
+                <span class="text-[10px] uppercase font-ui tracking-wider text-[var(--crimson-bright)] font-bold">Falta Grave</span>
+              </div>
+              <h4 class="text-lg font-bold uppercase text-[var(--parchment)] font-heading mb-2">
+                Áreas Proibidas & Conduta
+              </h4>
+              <p class="text-xs text-[var(--parchment-muted)] leading-relaxed mb-4">
+                Preservação física absoluta. Golpes em áreas restritas ou uso de força bruta resultam em perda de ponto e risco de desclassificação.
+              </p>
+            </div>
+            <ul class="space-y-1.5 text-xs text-[#fca5a5] font-ui border-t border-[rgba(192,57,43,0.3)] pt-3">
+              <li class="flex items-center gap-2">
+                <i data-lucide="x" class="w-3.5 h-3.5 text-[var(--crimson-bright)]"></i> Cabeça, rosto e nuca
+              </li>
+              <li class="flex items-center gap-2">
+                <i data-lucide="x" class="w-3.5 h-3.5 text-[var(--crimson-bright)]"></i> Partes íntimas / Genitais
+              </li>
+              <li class="flex items-center gap-2">
+                <i data-lucide="x" class="w-3.5 h-3.5 text-[var(--crimson-bright)]"></i> Golpe de chapa (lado da lâmina)
+              </li>
+            </ul>
+          </div>
+
+        </div>
+
+        <!-- Combat Directives Strip -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 p-4 rounded-2xl bg-[var(--bg-card)] border border-[var(--border-subtle)] text-xs font-ui">
+          
+          <div class="flex items-start gap-2.5">
+            <div class="w-7 h-7 rounded-lg bg-[rgba(201,168,76,0.15)] flex items-center justify-center shrink-0 text-[var(--gold)]">
+              <i data-lucide="trophy" class="w-3.5 h-3.5"></i>
+            </div>
+            <div>
+              <strong class="text-[var(--parchment)] block">Critério de Vitória</strong>
+              <span class="text-[var(--parchment-muted)]">5 pontos na Ranqueada / 3 pontos em Luta Comum.</span>
+            </div>
+          </div>
+
+          <div class="flex items-start gap-2.5">
+            <div class="w-7 h-7 rounded-lg bg-[rgba(201,168,76,0.15)] flex items-center justify-center shrink-0 text-[var(--gold)]">
+              <i data-lucide="swords" class="w-3.5 h-3.5"></i>
+            </div>
+            <div>
+              <strong class="text-[var(--parchment)] block">Desarme = Derrota</strong>
+              <span class="text-[var(--parchment-muted)]">Se a espada cair no chão, a derrota no round é imediata.</span>
+            </div>
+          </div>
+
+          <div class="flex items-start gap-2.5">
+            <div class="w-7 h-7 rounded-lg bg-[rgba(201,168,76,0.15)] flex items-center justify-center shrink-0 text-[var(--gold)]">
+              <i data-lucide="ban" class="w-3.5 h-3.5"></i>
+            </div>
+            <div>
+              <strong class="text-[var(--parchment)] block">Sem Contato Físico</strong>
+              <span class="text-[var(--parchment-muted)]">Proibido socos, chutes, empurrões ou segurar lâminas.</span>
+            </div>
+          </div>
+
+          <div class="flex items-start gap-2.5">
+            <div class="w-7 h-7 rounded-lg bg-[rgba(201,168,76,0.15)] flex items-center justify-center shrink-0 text-[var(--gold)]">
+              <i data-lucide="gavel" class="w-3.5 h-3.5"></i>
+            </div>
+            <div>
+              <strong class="text-[var(--parchment)] block">Juiz Soberano</strong>
+              <span class="text-[var(--parchment-muted)]">Apenas o árbitro pausa a luta e valida pontos. Decisão final.</span>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+      <!-- =========================================
+           BANNER: POSTER COMPLETO NO INSTAGRAM
+           ========================================= -->
+      <div class="card-dark p-6 sm:p-8 rounded-3xl border border-[var(--border-gold)] bg-gradient-to-r from-[#17130d] via-[#241c10] to-[#17130d] shadow-xl flex flex-col md:flex-row items-center justify-between gap-6">
+        
+        <div class="flex items-start sm:items-center gap-4 text-left">
+          <div class="w-14 h-14 rounded-2xl bg-[radial-gradient(circle,rgba(201,168,76,0.25)_0%,rgba(10,9,7,0.8)_100%)] border border-[var(--border-gold)] flex items-center justify-center shrink-0 text-[var(--gold-bright)] shadow-inner">
+            <i data-lucide="instagram" class="w-7 h-7"></i>
+          </div>
+          <div>
+            <div class="flex items-center gap-2 text-xs font-ui uppercase tracking-widest text-[var(--gold-bright)] font-bold">
+              <span>Card Oficial Completo</span>
+              <span class="inline-block w-1.5 h-1.5 rounded-full bg-[var(--gold)]"></span>
+              <span>15 Artigos</span>
+            </div>
+            <h4 class="text-xl sm:text-2xl font-bold uppercase text-[var(--parchment)] font-heading mt-0.5">
+              Consulte o Pôster Oficial no Instagram
+            </h4>
+            <p class="text-xs sm:text-sm text-[var(--parchment-muted)] mt-1 max-w-xl leading-relaxed">
+              Deseja ler todas as minúcias sobre armas de 1 e 2 mãos, regras de escudos, saída de arena e desempates? Veja o cartaz em alta resolução publicado em nosso feed oficial.
+            </p>
+          </div>
+        </div>
+
+        <div class="shrink-0 flex flex-col sm:flex-row items-center gap-3 w-full md:w-auto">
+          <a 
+            href="https://www.instagram.com/corvos_do.sul" 
+            target="_blank" 
+            rel="noopener noreferrer" 
+            class="btn-gold py-3.5 px-6 rounded-xl text-xs sm:text-sm font-bold flex items-center justify-center gap-2.5 w-full sm:w-auto shadow-lg"
+          >
+            <i data-lucide="instagram" class="w-4 h-4"></i>
+            <span>Ver Pôster no Instagram →</span>
+          </a>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- =========================================
+       SEÇÃO DE INSCRIÇÃO — CARD ÚNICO R$ 10
+       ========================================= -->
+  <section id="inscricao" class="py-20 px-4 md:px-8 bg-[var(--bg-darkest)] border-y border-[var(--border-gold)] relative overflow-hidden">
+    
+    <!-- Decorative background elements -->
+    <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-[radial-gradient(circle,rgba(201,168,76,0.08)_0%,transparent_70%)] pointer-events-none blur-3xl"></div>
+
+    <div class="max-w-4xl mx-auto relative">
+      
+      <div class="text-center max-w-xl mx-auto mb-12">
+        <span class="text-xs md:text-sm font-ui uppercase tracking-[0.25em] text-[var(--crimson-bright)] font-bold flex items-center justify-center gap-2">
+          <i data-lucide="flame" class="w-4 h-4"></i> Inscrição Única e Oficial
+        </span>
+        <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold uppercase text-[var(--parchment)] mt-2">
+          Garanta seu Lugar na Arena
+        </h2>
+        <p class="text-base text-[var(--parchment-muted)] mt-3">
+          Vagas por lote com limite físico na grade de combates do evento. Garanta antes que esgote!
+        </p>
+      </div>
+
+      <!-- THE SINGLE CARD (R$ 10) -->
+      <div class="max-w-xl mx-auto bg-gradient-to-b from-[#1c1813] to-[#14120e] rounded-3xl border-2 border-[var(--gold)] p-8 sm:p-10 shadow-[0_0_40px_rgba(201,168,76,0.2)] relative">
+        
+        <!-- Floating Pill -->
+        <div class="absolute -top-3.5 left-1/2 -translate-x-1/2 px-4 py-1 rounded-full bg-gradient-to-r from-[var(--crimson)] to-[var(--crimson-bright)] text-white text-xs font-ui font-bold uppercase tracking-wider shadow-lg flex items-center gap-1.5">
+          <i data-lucide="sparkles" class="w-3.5 h-3.5"></i> Lote Especial Expo Nerd
+        </div>
+
+        <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 border-b border-[var(--border-subtle)] pb-6 mt-2">
+          <div>
+            <span class="text-xs uppercase tracking-widest text-[var(--gold)] font-ui font-semibold">Passaporte Individual</span>
+            <h3 class="text-2xl sm:text-3xl font-bold uppercase text-[var(--parchment)] font-heading">
+              Inscrição de Duelista
+            </h3>
+            <span class="text-xs text-[var(--parchment-muted)]">Acesso completo ao Torneio de Swordplay</span>
+          </div>
+
+          <div class="text-left sm:text-right">
+            <div class="flex items-baseline gap-1">
+              <span class="text-xs font-ui text-[var(--parchment-muted)]">R$</span>
+              <span class="text-5xl font-extrabold text-[var(--gold-bright)] font-ui leading-none">10</span>
+              <span class="text-sm font-ui text-[var(--parchment-muted)]">,00</span>
+            </div>
+            <span class="text-[11px] text-[var(--parchment-muted)] block mt-0.5">Pagamento instantâneo Pix</span>
+          </div>
+        </div>
+
+        <!-- Inclusions list -->
+        <div class="py-6 space-y-3 font-ui text-sm text-[var(--parchment)]">
+          <div class="flex items-center gap-3">
+            <i data-lucide="check-circle-2" class="w-5 h-5 text-[var(--gold-bright)] shrink-0"></i>
+            <span><strong>Vaga Oficial na Chave de Lutas:</strong> entrada direta na competição</span>
+          </div>
+          <div class="flex items-center gap-3">
+            <i data-lucide="check-circle-2" class="w-5 h-5 text-[var(--gold-bright)] shrink-0"></i>
+            <span><strong>Equipamento de Combate Fornecido:</strong> espadas e proteções na arena</span>
+          </div>
+          <div class="flex items-center gap-3">
+            <i data-lucide="check-circle-2" class="w-5 h-5 text-[var(--gold-bright)] shrink-0"></i>
+            <span><strong>Instrução & Aquecimento:</strong> dicas táticas antes do seu primeiro duelo</span>
+          </div>
+          <div class="flex items-center gap-3">
+            <i data-lucide="check-circle-2" class="w-5 h-5 text-[var(--gold-bright)] shrink-0"></i>
+            <span><strong>Disputa pelo Trio de Katanas de Aço:</strong> chance real de ser o campeão</span>
+          </div>
+          <div class="flex items-center gap-3">
+            <i data-lucide="check-circle-2" class="w-5 h-5 text-[var(--gold-bright)] shrink-0"></i>
+            <span><strong>Confirmação da Inscrição:</strong> pelo WhatsApp após o pagamento</span>
+          </div>
+        </div>
+
+        <!-- CTA Button triggers modal -->
+        <div class="pt-4">
+          <button 
+            onclick="openPixModal()" 
+            class="w-full btn-gold py-4 px-6 rounded-xl text-base sm:text-lg font-bold flex items-center justify-center gap-2 cursor-pointer shadow-xl hover:scale-[1.02] transition-transform"
+          >
+            <i data-lucide="qr-code" class="w-5 h-5"></i>
+            <span>Garantir Vaga no Torneio (Pix R$ 10)</span>
+          </button>
+          
+          <div class="mt-3 flex items-center justify-center gap-2 text-xs text-[var(--parchment-muted)] font-ui text-center">
+            <i data-lucide="lock" class="w-3.5 h-3.5 text-[var(--gold)]"></i>
+            <span>Pagamento rápido e seguro • Confirmação em até 24h</span>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- =========================================
+       COMO SE INSCREVER (PASSO A PASSO)
+       ========================================= -->
+  <section class="py-16 px-4 md:px-8 border-b border-[var(--border-subtle)]">
+    <div class="max-w-5xl mx-auto">
+      <div class="text-center max-w-xl mx-auto mb-12">
+        <h3 class="text-2xl sm:text-3xl font-bold uppercase text-[var(--parchment)] font-heading">
+          Como Funciona a Inscrição
+        </h3>
+        <p class="text-sm text-[var(--parchment-muted)] mt-2">
+          Processo simplificado em menos de 2 minutos pelo seu celular
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 relative">
+        
+        <div class="card-dark p-6 rounded-2xl relative">
+          <div class="text-3xl font-black font-ui text-[var(--gold)] mb-3">01</div>
+          <h4 class="text-lg font-bold text-[var(--parchment)] font-heading uppercase mb-2">Clique e Faça o Pix</h4>
+          <p class="text-xs text-[var(--parchment-muted)] leading-relaxed">
+            Clique no botão de inscrição para abrir o QR Code e chave Pix copia-e-cola de R$ 10,00 na própria tela.
+          </p>
+        </div>
+
+        <div class="card-dark p-6 rounded-2xl relative">
+          <div class="text-3xl font-black font-ui text-[var(--gold)] mb-3">02</div>
+          <h4 class="text-lg font-bold text-[var(--parchment)] font-heading uppercase mb-2">Envie o Comprovante</h4>
+          <p class="text-xs text-[var(--parchment-muted)] leading-relaxed">
+            Com um clique, envie o comprovante no WhatsApp oficial dos Corvos com a mensagem já pré-preenchida.
+          </p>
+        </div>
+
+        <div class="card-dark p-6 rounded-2xl relative">
+          <div class="text-3xl font-black font-ui text-[var(--gold)] mb-3">03</div>
+          <h4 class="text-lg font-bold text-[var(--parchment)] font-heading uppercase mb-2">Vaga Confirmada!</h4>
+          <p class="text-xs text-[var(--parchment-muted)] leading-relaxed">
+            Receba seu número de duelista e as instruções de chegada no Centro de Convenções de Ilhéus.
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================
+       FAQ (PERGUNTAS FREQUENTES)
+       ========================================= -->
+  <section id="faq" class="py-20 px-4 md:px-8">
+    <div class="max-w-4xl mx-auto">
+      
+      <div class="text-center max-w-xl mx-auto mb-12">
+        <span class="text-xs md:text-sm font-ui uppercase tracking-[0.25em] text-[var(--gold-bright)] font-bold">
+          Dúvidas Comuns
+        </span>
+        <h2 class="text-3xl sm:text-4xl font-bold uppercase text-[var(--parchment)] mt-2">
+          Perguntas Frequentes
+        </h2>
+      </div>
+
+      <div class="space-y-4">
+        
+        <details class="group card-dark rounded-xl p-5 border border-[var(--border-subtle)] [&_summary::-webkit-details-marker]:hidden cursor-pointer" open>
+          <summary class="flex justify-between items-center font-heading text-base md:text-lg font-bold text-[var(--parchment)] group-hover:text-[var(--gold-bright)] transition-colors">
+            <span>Preciso levar minha própria espada ou roupa especial?</span>
+            <i data-lucide="chevron-down" class="w-5 h-5 text-[var(--gold)] transition-transform duration-300 group-open:rotate-180"></i>
+          </summary>
+          <p class="mt-4 text-sm text-[var(--parchment-muted)] leading-relaxed pl-1 border-l-2 border-[var(--gold)] ml-1">
+            <strong>Não precisa!</strong> Todas as espadas acolchoadas e equipamentos de proteção são fornecidos pelos Corvos do Sul na arena. Recomendamos apenas ir com roupas confortáveis e tênis para se movimentar com agilidade.
+          </p>
+        </details>
+
+        <details class="group card-dark rounded-xl p-5 border border-[var(--border-subtle)] [&_summary::-webkit-details-marker]:hidden cursor-pointer">
+          <summary class="flex justify-between items-center font-heading text-base md:text-lg font-bold text-[var(--parchment)] group-hover:text-[var(--gold-bright)] transition-colors">
+            <span>Nunca treinei swordplay, posso me inscrever?</span>
+            <i data-lucide="chevron-down" class="w-5 h-5 text-[var(--gold)] transition-transform duration-300 group-open:rotate-180"></i>
+          </summary>
+          <p class="mt-4 text-sm text-[var(--parchment-muted)] leading-relaxed pl-1 border-l-2 border-[var(--gold)] ml-1">
+            <strong>Com certeza!</strong> O torneio é aberto a iniciantes e curiosos. Antes de cada chave, nossa equipe ministra as regras básicas de guarda, ataque e defesa.
+          </p>
+        </details>
+
+        <details class="group card-dark rounded-xl p-5 border border-[var(--border-subtle)] [&_summary::-webkit-details-marker]:hidden cursor-pointer">
+          <summary class="flex justify-between items-center font-heading text-base md:text-lg font-bold text-[var(--parchment)] group-hover:text-[var(--gold-bright)] transition-colors">
+            <span>Qual é a idade mínima para competir?</span>
+            <i data-lucide="chevron-down" class="w-5 h-5 text-[var(--gold)] transition-transform duration-300 group-open:rotate-180"></i>
+          </summary>
+          <p class="mt-4 text-sm text-[var(--parchment-muted)] leading-relaxed pl-1 border-l-2 border-[var(--gold)] ml-1">
+            A idade mínima é de <strong>14 anos</strong>. Para menores de 18 anos, basta uma autorização simples de um responsável legal (enviamos o modelo pelo WhatsApp).
+          </p>
+        </details>
+
+        <details class="group card-dark rounded-xl p-5 border border-[var(--border-subtle)] [&_summary::-webkit-details-marker]:hidden cursor-pointer">
+          <summary class="flex justify-between items-center font-heading text-base md:text-lg font-bold text-[var(--parchment)] group-hover:text-[var(--gold-bright)] transition-colors">
+            <span>O Trio de Katanas é entregue no evento?</span>
+            <i data-lucide="chevron-down" class="w-5 h-5 text-[var(--gold)] transition-transform duration-300 group-open:rotate-180"></i>
+          </summary>
+          <p class="mt-4 text-sm text-[var(--parchment-muted)] leading-relaxed pl-1 border-l-2 border-[var(--gold)] ml-1">
+            <strong>Sim!</strong> O campeão recebe as 3 katanas de aço com expositor no domingo na cerimônia de premiação oficial na Arena dos Corvos do Sul.
+          </p>
+        </details>
+
+        <details class="group card-dark rounded-xl p-5 border border-[var(--border-subtle)] [&_summary::-webkit-details-marker]:hidden cursor-pointer">
+          <summary class="flex justify-between items-center font-heading text-base md:text-lg font-bold text-[var(--parchment)] group-hover:text-[var(--gold-bright)] transition-colors">
+            <span>A inscrição inclui o ingresso do Expo Nerd?</span>
+            <i data-lucide="chevron-down" class="w-5 h-5 text-[var(--gold)] transition-transform duration-300 group-open:rotate-180"></i>
+          </summary>
+          <p class="mt-4 text-sm text-[var(--parchment-muted)] leading-relaxed pl-1 border-l-2 border-[var(--gold)] ml-1">
+            A inscrição de R$ 10 é para participação no <strong>Torneio de Swordplay na Arena dos Corvos</strong>. A entrada geral no Centro de Convenções segue as normas e bilheteria oficial da organização do Expo Nerd Festival.
+          </p>
+        </details>
+
+        <details class="group card-dark rounded-xl p-5 border border-[var(--border-subtle)] [&_summary::-webkit-details-marker]:hidden cursor-pointer">
+          <summary class="flex justify-between items-center font-heading text-base md:text-lg font-bold text-[var(--parchment)] group-hover:text-[var(--gold-bright)] transition-colors">
+            <span>Onde posso conferir o regulamento e todas as 15 regras?</span>
+            <i data-lucide="chevron-down" class="w-5 h-5 text-[var(--gold)] transition-transform duration-300 group-open:rotate-180"></i>
+          </summary>
+          <p class="mt-4 text-sm text-[var(--parchment-muted)] leading-relaxed pl-1 border-l-2 border-[var(--gold)] ml-1">
+            O resumo tático das zonas de pontuação e proibições está detalhado acima na seção <a href="#como-funciona" class="text-[var(--gold-bright)] underline">Regras & Arena</a>. O cartaz oficial completo com todos os 15 artigos, regras de empunhadura e arbitragem está publicado no pôster do nosso <a href="https://www.instagram.com/corvos_do.sul" target="_blank" rel="noopener noreferrer" class="text-[var(--gold-bright)] underline">Instagram oficial @corvos_do.sul</a>.
+          </p>
+        </details>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- =========================================
+       CTA FINAL COM ESCASSEZ
+       ========================================= -->
+  <section class="py-20 px-4 md:px-8 bg-gradient-to-t from-[var(--bg-darkest)] to-[var(--bg-main)] border-t border-[var(--border-subtle)] text-center relative overflow-hidden">
+    <div class="max-w-3xl mx-auto">
+      <span class="inline-flex items-center gap-1.5 py-1 px-4 rounded-full bg-[rgba(231,76,60,0.15)] border border-[rgba(231,76,60,0.3)] text-[var(--crimson-bright)] text-xs font-ui font-bold uppercase mb-4">
+        <i data-lucide="alert-circle" class="w-4 h-4"></i> As vagas de cada chave são limitadas
+      </span>
+      <h2 class="text-3xl sm:text-5xl font-extrabold uppercase text-[var(--parchment)] leading-tight">
+        Seu Nome Esculpido na Honra da Batalha
+      </h2>
+      <p class="text-base sm:text-lg text-[var(--parchment-muted)] mt-4 mb-8">
+        Não perca a chance de lutar na arena mais épica do Expo Nerd Ilhéus e disputar as Katanas de Aço por apenas R$ 10.
+      </p>
+
+      <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+        <button onclick="openPixModal()" class="btn-crimson py-4 px-8 rounded-xl text-base md:text-lg flex items-center justify-center gap-2 cursor-pointer shadow-2xl">
+          <i data-lucide="zap" class="w-5 h-5 fill-current"></i>
+          <span>Garantir Vaga Agora (R$ 10)</span>
+        </button>
+        <a href="https://instagram.com/corvos_do.sul" target="_blank" rel="noopener noreferrer" class="py-4 px-6 rounded-xl text-sm font-ui font-semibold text-[var(--parchment)] bg-[var(--bg-card)] hover:bg-[var(--bg-card-hover)] border border-[var(--border-subtle)] flex items-center gap-2">
+          <i data-lucide="instagram" class="w-4 h-4 text-[var(--gold)]"></i>
+          <span>Instagram @corvos_do.sul</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================
+       FOOTER
+       ========================================= -->
+  <footer class="bg-[var(--bg-darkest)] py-12 px-4 md:px-8 border-t border-[var(--border-subtle)] text-center sm:text-left">
+    <div class="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-6">
+      
+      <div class="flex items-center gap-4">
+        <img src="assets/images/brasao.png" alt="Brasão Corvos do Sul" class="w-12 h-12 object-contain"/>
+        <div class="text-left">
+          <span class="block font-heading text-lg font-bold text-[var(--parchment)]">Corvos do Sul Swordplay</span>
+          <span class="text-xs text-[var(--parchment-dark)] font-ui">Ipiaú • BA • Presença no Expo Nerd Ilhéus 2026</span>
+        </div>
+      </div>
+
+      <div class="flex items-center gap-4 text-xs text-[var(--parchment-muted)] font-ui">
+        <a href="index.html" class="hover:text-[var(--gold)] transition-colors">Site Principal</a>
+        <span>•</span>
+        <a href="https://instagram.com/corvos_do.sul" target="_blank" rel="noopener noreferrer" class="hover:text-[var(--gold)] transition-colors flex items-center gap-1">
+          <i data-lucide="instagram" class="w-3.5 h-3.5"></i> @corvos_do.sul
+        </a>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- =========================================
+       MODAL PIX + WHATSAPP (FLUXO HÍBRIDO SEGURO)
+       ========================================= -->
+  <div id="pix-modal" class="fixed inset-0 z-50 flex items-center justify-center p-4 modal-backdrop opacity-0 pointer-events-none transition-opacity duration-300">
+    <div class="bg-[var(--bg-card)] border-2 border-[var(--border-gold)] rounded-3xl max-w-lg w-full p-6 sm:p-8 shadow-2xl relative transform scale-95 transition-transform duration-300 max-h-[90vh] overflow-y-auto">
+      
+      <!-- Close Button -->
+      <button onclick="closePixModal()" class="absolute top-5 right-5 text-[var(--parchment-dark)] hover:text-white transition-colors p-1 cursor-pointer">
+        <i data-lucide="x" class="w-6 h-6"></i>
+      </button>
+
+      <!-- Modal Title -->
+      <div class="text-center mb-6">
+        <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[rgba(201,168,76,0.15)] text-[var(--gold-bright)] text-xs font-ui font-bold uppercase mb-2">
+          <i data-lucide="shield" class="w-3.5 h-3.5"></i> Inscrição de Duelista • R$ 10,00
+        </div>
+        <h3 class="text-2xl font-bold uppercase text-[var(--parchment)] font-heading">
+          Pagamento via Pix
+        </h3>
+        <p class="text-xs text-[var(--parchment-muted)] mt-1">
+          Pague pelo aplicativo do seu banco e envie o comprovante no WhatsApp para confirmação.
+        </p>
+      </div>
+
+      <!-- QR Code Container -->
+      <div class="flex flex-col items-center bg-[var(--bg-darkest)] p-5 rounded-2xl border border-[var(--border-subtle)] mb-5">
+        <div class="bg-white p-3 rounded-xl shadow-md" id="qrcode-container">
+          <!-- QR Code Image gerado dinamicamente via Google Chart API ou SVG -->
+          <img id="pix-qrcode-img" src="" alt="QR Code Pix R$ 10" class="w-48 h-48 sm:w-52 sm:h-52 object-contain"/>
+        </div>
+        
+        <div class="mt-3 text-center">
+          <span class="text-xs text-[var(--parchment-muted)] block">Beneficiário: <strong class="text-[var(--parchment)]" id="pix-receiver-label">Corvos do Sul</strong></span>
+          <span class="text-xs text-[var(--parchment-muted)] block">Valor: <strong class="text-[var(--gold-bright)] font-ui font-bold">R$ 10,00</strong></span>
+        </div>
+      </div>
+
+      <!-- Pix Copia e Cola -->
+      <div class="space-y-2 mb-6">
+        <label class="block text-xs font-ui font-semibold text-[var(--parchment-muted)] uppercase tracking-wider">
+          Código Pix Copia-e-Cola:
+        </label>
+        <div class="flex gap-2">
+          <input 
+            type="text" 
+            id="pix-code-input" 
+            readonly 
+            class="w-full bg-[var(--bg-darkest)] border border-[var(--border-subtle)] rounded-xl px-3.5 py-2.5 text-xs text-[var(--parchment-muted)] font-mono focus:outline-none select-all truncate"
+            value=""
+          />
+          <button 
+            onclick="copyPixCode()" 
+            id="copy-pix-btn"
+            class="shrink-0 bg-[rgba(201,168,76,0.15)] hover:bg-[rgba(201,168,76,0.3)] text-[var(--gold-bright)] border border-[var(--border-gold)] px-4 py-2.5 rounded-xl text-xs font-ui font-bold flex items-center gap-1.5 transition-colors cursor-pointer"
+          >
+            <i data-lucide="copy" class="w-4 h-4"></i>
+            <span id="copy-btn-text">Copiar</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Step 2: Confirmation on WhatsApp -->
+      <div class="bg-[rgba(34,197,94,0.1)] border border-[rgba(34,197,94,0.3)] rounded-2xl p-4 mb-6">
+        <div class="flex items-start gap-3">
+          <i data-lucide="message-circle" class="w-5 h-5 text-green-400 shrink-0 mt-0.5"></i>
+          <div>
+            <h4 class="text-xs font-bold font-ui uppercase text-green-300">Após realizar o pagamento:</h4>
+            <p class="text-xs text-[var(--parchment)] mt-1 leading-relaxed">
+              Clique no botão verde abaixo para enviar o comprovante no WhatsApp dos Corvos do Sul e garantir seu passaporte de duelista.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Action Button: Open WhatsApp -->
+      <a 
+        id="whatsapp-confirm-link"
+        href="#"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="w-full bg-[#25D366] hover:bg-[#20bd5a] text-black font-ui font-bold text-sm sm:text-base py-3.5 px-6 rounded-xl flex items-center justify-center gap-2 shadow-lg transition-transform hover:scale-[1.02]"
+      >
+        <i data-lucide="send" class="w-5 h-5"></i>
+        <span>Já Paguei! Confirmar no WhatsApp →</span>
+      </a>
+
+      <!-- Cancel / Close Text -->
+      <div class="mt-4 text-center">
+        <button onclick="closePixModal()" class="text-xs text-[var(--parchment-dark)] hover:text-[var(--parchment-muted)] transition-colors underline cursor-pointer">
+          Fechar janela
+        </button>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- =========================================
+       SCRIPTS
+       ========================================= -->
+  <script>
+    // Inicializar Ícones Lucide
+    lucide.createIcons();
+
+    // 1. Contador Regressivo para a Arena (11 de Setembro às 12:00 - Horário de Brasília)
+    function updateCountdown() {
+      const now = new Date();
+      let targetYear = now.getFullYear();
+      let targetDate = new Date(`${targetYear}-09-11T12:00:00-03:00`).getTime();
+      const eventEndDate = new Date(`${targetYear}-09-13T22:00:00-03:00`).getTime();
+
+      if (now.getTime() > eventEndDate) {
+        targetYear++;
+        targetDate = new Date(`${targetYear}-09-11T12:00:00-03:00`).getTime();
+      }
+
+      const difference = targetDate - now.getTime();
+
+      const daysEl = document.getElementById("days");
+      const hoursEl = document.getElementById("hours");
+      const minutesEl = document.getElementById("minutes");
+      const secondsEl = document.getElementById("seconds");
+      const countdownEl = document.getElementById("countdown");
+
+      if (difference > 0) {
+        const days = Math.floor(difference / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((difference / (1000 * 60 * 60)) % 24);
+        const minutes = Math.floor((difference / (1000 * 60)) % 60);
+        const seconds = Math.floor((difference / 1000) % 60);
+
+        if (daysEl) daysEl.innerText = String(days).padStart(2, '0');
+        if (hoursEl) hoursEl.innerText = String(hours).padStart(2, '0');
+        if (minutesEl) minutesEl.innerText = String(minutes).padStart(2, '0');
+        if (secondsEl) secondsEl.innerText = String(seconds).padStart(2, '0');
+      } else {
+        if (now.getTime() <= eventEndDate) {
+          if (countdownEl) {
+            countdownEl.innerHTML = "<div class='col-span-4 text-center py-2 text-sm font-bold text-[var(--gold-bright)] font-ui animate-pulse'>⚔️ O Torneio está acontecendo na Arena dos Corvos! ⚔️</div>";
+          }
+        } else {
+          if (countdownEl) {
+            countdownEl.innerHTML = "<div class='col-span-4 text-center py-2 text-sm font-bold text-[var(--parchment-muted)] font-ui'>Torneio Encerrado</div>";
+          }
+        }
+      }
+    }
+    setInterval(updateCountdown, 1000);
+    updateCountdown();
+
+    // 2. Gerador de Pix Estático EMV Padrão Banco Central
+    // Função auxiliar para calcular CRC16 CCITT (0xFFFF)
+    function crc16(buffer) {
+      let crc = 0xFFFF;
+      for (let i = 0; i < buffer.length; i++) {
+        crc ^= buffer.charCodeAt(i) << 8;
+        for (let j = 0; j < 8; j++) {
+          if ((crc & 0x8000) !== 0) {
+            crc = ((crc << 1) ^ 0x1021) & 0xFFFF;
+          } else {
+            crc = (crc << 1) & 0xFFFF;
+          }
+        }
+      }
+      return crc.toString(16).toUpperCase().padStart(4, '0');
+    }
+
+    function formatEMV(id, value) {
+      const len = String(value.length).padStart(2, '0');
+      return `${id}${len}${value}`;
+    }
+
+    function generatePixPayload(key, receiver, city, amount, txid = "EXPO2026") {
+      // Formata nome e cidade para caracteres ASCII permitidos no padrão Pix
+      const cleanName = receiver.normalize("NFD").replace(/[\u0300-\u036f]/g, "").slice(0, 25);
+      const cleanCity = city.normalize("NFD").replace(/[\u0300-\u036f]/g, "").slice(0, 15);
+      
+      const payloadFormatIndicator = formatEMV("00", "01");
+      const merchantAccountInfo = formatEMV("26", 
+        formatEMV("00", "BR.GOV.BCB.PIX") + 
+        formatEMV("01", key)
+      );
+      const merchantCategoryCode = formatEMV("52", "0000");
+      const transactionCurrency = formatEMV("53", "986");
+      const transactionAmount = formatEMV("54", Number(amount).toFixed(2));
+      const countryCode = formatEMV("58", "BR");
+      const merchantName = formatEMV("59", cleanName);
+      const merchantCity = formatEMV("60", cleanCity);
+      const additionalDataField = formatEMV("62", formatEMV("05", txid));
+      
+      const rawPayload = payloadFormatIndicator +
+        merchantAccountInfo +
+        merchantCategoryCode +
+        transactionCurrency +
+        transactionAmount +
+        countryCode +
+        merchantName +
+        merchantCity +
+        additionalDataField +
+        "6304";
+      
+      const crc = crc16(rawPayload);
+      return rawPayload + crc;
+    }
+
+    // Inicializar Dados do Modal Pix
+    const pixPayload = window.CORVOS_CONFIG.pixPayload || generatePixPayload(
+      window.CORVOS_CONFIG.pixKey,
+      window.CORVOS_CONFIG.pixReceiverName,
+      window.CORVOS_CONFIG.pixCity,
+      window.CORVOS_CONFIG.ticketPrice
+    );
+
+    document.getElementById("pix-code-input").value = pixPayload;
+    document.getElementById("pix-receiver-label").innerText = window.CORVOS_CONFIG.pixReceiverName;
+    
+    // Gerar imagem do QR Code usando API rápida e segura
+    const qrCodeUrl = `https://api.qrserver.com/v1/create-qr-code/?size=300x300&data=${encodeURIComponent(pixPayload)}`;
+    document.getElementById("pix-qrcode-img").src = qrCodeUrl;
+
+    // Link do WhatsApp com mensagem pré-definida
+    const message = encodeURIComponent(
+      `Olá Corvos do Sul! Acabei de realizar o pagamento Pix de R$ 10,00 para a minha inscrição no Torneio de Swordplay do Expo Nerd Ilhéus. Segue o meu comprovante!`
+    );
+    const waLink = `https://wa.me/${window.CORVOS_CONFIG.whatsappNumber}?text=${message}`;
+    document.getElementById("whatsapp-confirm-link").href = waLink;
+
+    // 3. Funções do Modal
+    function openPixModal() {
+      const modal = document.getElementById("pix-modal");
+      modal.classList.remove("opacity-0", "pointer-events-none");
+      modal.firstElementChild.classList.remove("scale-95");
+      modal.firstElementChild.classList.add("scale-100");
+      document.body.style.overflow = "hidden";
+    }
+
+    function closePixModal() {
+      const modal = document.getElementById("pix-modal");
+      modal.classList.add("opacity-0", "pointer-events-none");
+      modal.firstElementChild.classList.remove("scale-100");
+      modal.firstElementChild.classList.add("scale-95");
+      document.body.style.overflow = "auto";
+    }
+
+    // Fechar ao clicar fora
+    document.getElementById("pix-modal").addEventListener("click", function(e) {
+      if (e.target === this) {
+        closePixModal();
+      }
+    });
+
+    // Fechar com ESC
+    document.addEventListener("keydown", function(e) {
+      if (e.key === "Escape") closePixModal();
+    });
+
+    // 4. Copiar Pix
+    function copyPixCode() {
+      const input = document.getElementById("pix-code-input");
+      input.select();
+      input.setSelectionRange(0, 99999);
+      navigator.clipboard.writeText(input.value).then(() => {
+        const btnText = document.getElementById("copy-btn-text");
+        btnText.innerText = "Copiado!";
+        const btn = document.getElementById("copy-pix-btn");
+        btn.classList.add("bg-green-600", "text-white");
+        setTimeout(() => {
+          btnText.innerText = "Copiar";
+          btn.classList.remove("bg-green-600", "text-white");
+        }, 2000);
+      });
+    }
+
+    // 5. Inicializar Ícones Lucide
+    document.addEventListener("DOMContentLoaded", () => {
+      if (window.lucide) lucide.createIcons();
+    });
+    if (window.lucide) {
+      lucide.createIcons();
+    }
+  </script>
+</body>
+</html>
