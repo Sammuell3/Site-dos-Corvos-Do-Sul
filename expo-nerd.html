@@ -300,40 +300,15 @@
         <strong class="text-[var(--parchment)] font-semibold">O campeão leva para casa o Trio de Katanas de Aço!</strong>
       </p>
 
-      <!-- Countdown Component -->
-      <div class="mt-8 p-4 rounded-2xl bg-[var(--bg-card)] border border-[var(--border-gold)] max-w-lg w-full shadow-2xl">
-        <div class="text-xs uppercase tracking-widest text-[var(--gold)] font-ui font-semibold mb-3 flex items-center justify-center gap-1.5">
-          <i data-lucide="clock" class="w-4 h-4"></i> Contagem Regressiva para a Batalha
-        </div>
-        <div class="grid grid-cols-4 gap-2 text-center" id="countdown">
-          <div class="bg-[var(--bg-darkest)] p-2 rounded-lg border border-[var(--border-subtle)]">
-            <span class="block text-2xl md:text-3xl font-bold font-ui text-[var(--parchment)]" id="days">--</span>
-            <span class="text-[10px] uppercase tracking-wider text-[var(--parchment-dark)]">Dias</span>
-          </div>
-          <div class="bg-[var(--bg-darkest)] p-2 rounded-lg border border-[var(--border-subtle)]">
-            <span class="block text-2xl md:text-3xl font-bold font-ui text-[var(--parchment)]" id="hours">--</span>
-            <span class="text-[10px] uppercase tracking-wider text-[var(--parchment-dark)]">Horas</span>
-          </div>
-          <div class="bg-[var(--bg-darkest)] p-2 rounded-lg border border-[var(--border-subtle)]">
-            <span class="block text-2xl md:text-3xl font-bold font-ui text-[var(--parchment)]" id="minutes">--</span>
-            <span class="text-[10px] uppercase tracking-wider text-[var(--parchment-dark)]">Min</span>
-          </div>
-          <div class="bg-[var(--bg-darkest)] p-2 rounded-lg border border-[var(--border-subtle)]">
-            <span class="block text-2xl md:text-3xl font-bold font-ui text-[var(--crimson-bright)]" id="seconds">--</span>
-            <span class="text-[10px] uppercase tracking-wider text-[var(--parchment-dark)]">Seg</span>
-          </div>
-        </div>
-      </div>
-
       <!-- Hero Call To Action Buttons -->
-      <div class="mt-10 flex flex-col sm:flex-row items-center gap-4 w-full justify-center max-w-md">
-        <a href="#inscricao" class="w-full sm:w-auto btn-crimson py-4 px-8 rounded-xl text-base md:text-lg flex items-center justify-center gap-3 animate-pulse-slow">
-          <i data-lucide="shield" class="w-5 h-5"></i>
+      <div class="mt-8 sm:mt-10 flex flex-col sm:flex-row items-center justify-center gap-4 w-full max-w-2xl mx-auto">
+        <a href="#inscricao" class="w-full sm:w-auto btn-crimson py-3.5 px-7 sm:px-8 rounded-xl text-sm sm:text-base inline-flex items-center justify-center gap-2.5 whitespace-nowrap shadow-lg hover:shadow-crimson transition-all">
+          <i data-lucide="shield" class="w-5 h-5 shrink-0"></i>
           <span>Garantir Inscrição — R$ 10</span>
         </a>
-        <a href="#premio" class="w-full sm:w-auto py-4 px-6 rounded-xl text-sm md:text-base font-ui font-semibold text-[var(--parchment)] bg-[var(--bg-card)] hover:bg-[var(--bg-card-hover)] border border-[var(--border-subtle)] hover:border-[var(--border-gold)] transition-all flex items-center justify-center gap-2">
+        <a href="#premio" class="w-full sm:w-auto py-3.5 px-6 rounded-xl text-sm sm:text-base font-ui font-semibold text-[var(--parchment)] bg-[var(--bg-card)] hover:bg-[var(--bg-card-hover)] border border-[var(--border-subtle)] hover:border-[var(--border-gold)] transition-all inline-flex items-center justify-center gap-2 whitespace-nowrap shadow-md">
           <span>Ver Prêmio & Regras</span>
-          <i data-lucide="chevron-down" class="w-4 h-4"></i>
+          <i data-lucide="chevron-down" class="w-4 h-4 shrink-0"></i>
         </a>
       </div>
 
@@ -1117,50 +1092,6 @@
     // Inicializar Ícones Lucide
     lucide.createIcons();
 
-    // 1. Contador Regressivo para a Arena (11 de Setembro às 12:00 - Horário de Brasília)
-    function updateCountdown() {
-      const now = new Date();
-      let targetYear = now.getFullYear();
-      let targetDate = new Date(`${targetYear}-09-11T12:00:00-03:00`).getTime();
-      const eventEndDate = new Date(`${targetYear}-09-13T22:00:00-03:00`).getTime();
-
-      if (now.getTime() > eventEndDate) {
-        targetYear++;
-        targetDate = new Date(`${targetYear}-09-11T12:00:00-03:00`).getTime();
-      }
-
-      const difference = targetDate - now.getTime();
-
-      const daysEl = document.getElementById("days");
-      const hoursEl = document.getElementById("hours");
-      const minutesEl = document.getElementById("minutes");
-      const secondsEl = document.getElementById("seconds");
-      const countdownEl = document.getElementById("countdown");
-
-      if (difference > 0) {
-        const days = Math.floor(difference / (1000 * 60 * 60 * 24));
-        const hours = Math.floor((difference / (1000 * 60 * 60)) % 24);
-        const minutes = Math.floor((difference / (1000 * 60)) % 60);
-        const seconds = Math.floor((difference / 1000) % 60);
-
-        if (daysEl) daysEl.innerText = String(days).padStart(2, '0');
-        if (hoursEl) hoursEl.innerText = String(hours).padStart(2, '0');
-        if (minutesEl) minutesEl.innerText = String(minutes).padStart(2, '0');
-        if (secondsEl) secondsEl.innerText = String(seconds).padStart(2, '0');
-      } else {
-        if (now.getTime() <= eventEndDate) {
-          if (countdownEl) {
-            countdownEl.innerHTML = "<div class='col-span-4 text-center py-2 text-sm font-bold text-[var(--gold-bright)] font-ui animate-pulse'>⚔️ O Torneio está acontecendo na Arena dos Corvos! ⚔️</div>";
-          }
-        } else {
-          if (countdownEl) {
-            countdownEl.innerHTML = "<div class='col-span-4 text-center py-2 text-sm font-bold text-[var(--parchment-muted)] font-ui'>Torneio Encerrado</div>";
-          }
-        }
-      }
-    }
-    setInterval(updateCountdown, 1000);
-    updateCountdown();
 
     // 2. Gerador de Pix Estático EMV Padrão Banco Central
     // Função auxiliar para calcular CRC16 CCITT (0xFFFF)
